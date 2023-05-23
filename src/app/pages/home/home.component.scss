@@ -1,0 +1,97 @@
+::ng-deep:root {
+  --color1: #097300;
+  --color2: #4f4e4e;
+}
+
+input[type="color"] {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: linear-gradient(to right, #ccc, #333, #000, #ddd);
+  padding: 4px;
+  cursor: pointer;
+
+  &:focus{
+    border-radius: 50%;
+    outline: none;
+  }
+
+  &::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+
+  &::-webkit-color-swatch{
+    border: 0;
+    border-radius: 50%;
+  }
+
+  &::-moz-color-swatch,
+  &::-moz-focus-inner{
+    border: 0;
+  }
+
+  &::-moz-focus-inner{
+    padding: 0;
+  }
+}
+
+.left-page {
+  padding: 5rem 0 5rem 10rem;
+  background: var(--color1);
+  color: var(--color2);
+  text-shadow: 1px 1px var(--color1);
+  transition: all .1s ease-in-out;
+
+  .color-picker {
+    background: var(--color2);
+    color: var(--color1);
+    padding-right: 5rem;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+  }
+}
+.right-page {
+  padding: 5rem 10rem 5rem 0;
+  background: var(--color2);
+  color: var(--color1);
+  text-shadow: 1px 1px var(--color2);
+  transition: all .1s ease-in-out;
+
+  .color-picker {
+    background: var(--color1);
+    color: var(--color2);
+    padding-left: 5rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+  }
+}
+
+.color-picker {
+  h3 {
+    text-transform: uppercase;
+  }
+}
+
+#contrast {
+  background-color: rgb(136, 183, 46);
+  margin-top: 3rem;
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  line-height: 1;
+  z-index: 1;
+  border: 0.5em solid #fff;
+  color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  box-shadow: 0 0 8px rgba(0,0,0,.2);
+  transition: all .2s ease-in-out;
+}

@@ -1,0 +1,44 @@
+<div id="contrast">{{contrast}}</div>
+
+<div class="row">
+  <div class="col-md-6 left-page">
+      <div class="color-picker d-flex justify-content-between py-2 ps-2 align-items-center">
+        <input type="color" [(ngModel)]="color1" (input)="changeColor('--color1', color1)">
+        <h3 class="mb-0">{{ color1 }}</h3>
+      </div>
+
+    <section class="pt-5 pe-3">
+      <h1 class="fw-bold">
+        How to use
+      </h1>
+      <p>
+        As you type, the contrast ratio indicated will update. Hover over the circle to get more detailed information. When semi-transparent colors are involved as backgrounds, the contrast ratio will have an error margin, to account for the different colors they may be over.
+        <br><br>
+        This sample text attempts to visually demonstrate how readable this color combination is, for normal, italic, bold, or bold italic text of various sizes and font styles.
+        <br><br>
+        Contrast Ratio was created by <strong>Rami Almofleh</strong>.
+        <br><br>
+        <small>It's critical for content readability and web performance that your website's ratio be in the green zone.</small>
+      </p>
+    </section>
+  </div>
+  <div class="col-md-6 right-page">
+    <div class="color-picker d-flex justify-content-between py-2 pe-2 align-items-center">
+      <h3 class="mb-0">{{ color2 }}</h3>
+      <input type="color" [(ngModel)]="color2" (input)="changeColor('--color2', color2)">
+    </div>
+
+    <section class="pt-5 ps-3">
+      <h1 class="fw-bold">
+        How to use
+      </h1>
+      <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+        <br><br>
+        <small>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</small>
+        <br><br>
+        <strong>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</strong>
+      </p>
+    </section>
+  </div>
+</div>
