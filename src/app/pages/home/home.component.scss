@@ -95,3 +95,27 @@ input[type="color"] {
   box-shadow: 0 0 8px rgba(0,0,0,.2);
   transition: all .2s ease-in-out;
 }
+
+
+@media (max-width: 760px) {
+  .left-page {
+    padding: 5rem 0 5rem 2rem;
+
+    .color-picker {
+      padding-right: 12rem;
+    }
+  }
+
+  #contrast {
+    right: 1rem;
+    transform: unset;
+    margin-left: unset;
+  }
+
+  .right-page {
+
+    section {
+      padding-left: 2rem !important
+    }
+  }
+}
